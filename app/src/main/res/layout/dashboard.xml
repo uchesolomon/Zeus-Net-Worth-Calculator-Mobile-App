@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <Button
+        android:id="@+id/btnNetWorth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Calculate Net Worth"
+        app:layout_constraintEnd_toEndOf="@+id/liabilityValue"
+        app:layout_constraintStart_toStartOf="@+id/liabilityValue"
+        app:layout_constraintTop_toBottomOf="@+id/liabilityValue" />
+
+    <EditText
+        android:id="@+id/netWorthValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/dashText" />
+
+    <EditText
+        android:id="@+id/assetValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:ems="10"
+        android:hint="Enter assets value"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/netWorthValue"
+        app:layout_constraintStart_toStartOf="@+id/netWorthValue"
+        app:layout_constraintTop_toBottomOf="@+id/netWorthValue" />
+
+    <EditText
+        android:id="@+id/liabilityValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:ems="10"
+        android:hint="Enter liabilities value"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/cashValue"
+        app:layout_constraintStart_toStartOf="@+id/cashValue"
+        app:layout_constraintTop_toBottomOf="@+id/cashValue" />
+
+    <EditText
+        android:id="@+id/cashValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:ems="10"
+        android:hint="Enter cash"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="@+id/assetValue"
+        app:layout_constraintStart_toStartOf="@+id/assetValue"
+        app:layout_constraintTop_toBottomOf="@+id/assetValue" />
+
+    <TextView
+        android:id="@+id/dashText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/playfair_display"
+        android:lineSpacingExtra="4sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeText" />
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/playfair_display"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="8sp"
+        android:text="Welcome"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:fontFamily="@font/playfair_display"
+        android:gravity="right"
+        android:text="Net Worth :"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/netWorthValue"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:gravity="right"
+        android:text="Assets :"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/assetValue"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:gravity="right"
+        android:text="Cash :"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cashValue"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/playfair_display"
+        android:gravity="right"
+        android:text="Liabilities :"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/liabilityValue"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

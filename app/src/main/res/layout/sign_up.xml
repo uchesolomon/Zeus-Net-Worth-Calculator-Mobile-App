@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp">
+
+    <Button
+        android:id="@+id/btnReg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:fontFamily="@font/playfair_display"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/regPassword"
+        app:layout_constraintStart_toStartOf="@+id/regPassword"
+        app:layout_constraintTop_toBottomOf="@+id/regPassword" />
+
+    <EditText
+        android:id="@+id/regLastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints=""
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Last name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/regEmail"
+        app:layout_constraintEnd_toEndOf="@+id/regFirstName"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="@+id/regFirstName"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/regEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:autofillHints=""
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/regPhone"
+        app:layout_constraintEnd_toEndOf="@+id/regLastName"
+        app:layout_constraintStart_toStartOf="@+id/regLastName"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/regPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Phone number"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/regEmail"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/regEmail"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/regPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/regPhone"
+        app:layout_constraintStart_toStartOf="@+id/regPhone"
+        app:layout_constraintTop_toBottomOf="@+id/regPhone"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/regFirstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_marginBottom="16dp"
+        android:autofillHints=""
+        android:background="@android:drawable/edit_text"
+        android:ems="10"
+        android:fontFamily="@font/montserrat"
+        android:hint="First name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/regLastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="o" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
