@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,8 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText emailLogin = (EditText) findViewById(R.id.emailLogin);
         final EditText passwordLogin = (EditText) findViewById(R.id.passwordLogin);
+        final TextView signup = (TextView) findViewById(R.id.signUp);
         Button loginButton = (Button) findViewById(R.id.loginButton);
-        Button registerButton = (Button) findViewById(R.id.registerButton);
+
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent registerScreen = new Intent(MainActivity.this, SignUp.class);

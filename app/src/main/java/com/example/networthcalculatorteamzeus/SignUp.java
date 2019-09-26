@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,6 +22,7 @@ public class SignUp extends AppCompatActivity {
         final EditText email = (EditText) findViewById(R.id.regEmail);
         final EditText phone = (EditText) findViewById(R.id.regPhone);
         final EditText password = (EditText) findViewById(R.id.regPassword);
+        final TextView signin = (TextView) findViewById(R.id.signIn);
         Button btnRegister = (Button) findViewById(R.id.btnReg);
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -40,12 +42,20 @@ public class SignUp extends AppCompatActivity {
                 editor.commit();
                 editor.putString(newPassword, newPassword);
                 editor.commit();
-                editor.putString(newEmail + newPassword + "data", newFirstName + newLastName + "\n" + newEmail + "\n" + newPhone);
+                editor.putString(newEmail + newPassword + "data", newFirstName + " " + newLastName);
                 editor.commit();
 
                 Intent loginScreen = new Intent(SignUp.this, MainActivity.class);
                 startActivity(loginScreen);
 
+            }
+        });
+
+        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent loginScreen = new Intent(SignUp.this, MainActivity.class);
+                startActivity(loginScreen);
             }
         });
     }
