@@ -4,28 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E5E5E5"
+    android:background="#D7E7E9"
     tools:context=".DashboardActivity">
-
-    <EditText
-        android:id="@+id/netWorthValue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:cursorVisible="false"
-        android:ems="10"
-        android:fontFamily="@font/open_sans"
-        android:gravity="center"
-        android:inputType="numberDecimal"
-        android:textColor="#219653"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
     <TextView
@@ -57,7 +37,7 @@
         android:fontFamily="@font/open_sans"
         android:lineSpacingExtra="8sp"
         android:text="Welcome"
-        android:textColor="@android:color/secondary_text_light_nodisable"
+        android:textColor="#302F2F"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,8 +52,8 @@
         android:gravity="center"
         android:text="Your net worth is (₦)"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/netWorthValue"
-        app:layout_constraintStart_toStartOf="@+id/netWorthValue"
+        app:layout_constraintEnd_toEndOf="@+id/networthVal"
+        app:layout_constraintStart_toStartOf="@+id/networthVal"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
     <TextView
@@ -89,6 +69,22 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
         app:layout_constraintTop_toBottomOf="@+id/dashText" />
+
+    <TextView
+        android:id="@+id/networthVal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center"
+        android:textColor="#219653"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
