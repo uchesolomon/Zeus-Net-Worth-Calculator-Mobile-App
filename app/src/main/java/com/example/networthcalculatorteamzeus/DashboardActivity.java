@@ -1,5 +1,6 @@
 package com.example.networthcalculatorteamzeus;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,8 @@ public class DashboardActivity extends AppCompatActivity {
         final EditText liabilities = (EditText) findViewById(R.id.liabilityValue);
         final TextView netWorth = (TextView) findViewById(R.id.networthVal);
         Button btnCalculate = (Button) findViewById(R.id.btnNetWorth);
+        Button btnLogout = (Button) findViewById(R.id.btnSignOut);
+        Button tipsBtn = (Button) findViewById(R.id.btnTips);
         int ans = 0;
 
 
@@ -54,6 +57,22 @@ public class DashboardActivity extends AppCompatActivity {
                     double result = assetVal + cashVal - liabilityVal;
                     netWorth.setText(String.format(Locale.getDefault(), "%f", result));
                 }
+            }
+        });
+
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent logout = new Intent(DashboardActivity.this, MainActivity.class);
+                startActivity(logout);
+            }
+        });
+
+        tipsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent show = new Intent(DashboardActivity.this, Tips.class);
+                startActivity(show);
             }
         });
     }

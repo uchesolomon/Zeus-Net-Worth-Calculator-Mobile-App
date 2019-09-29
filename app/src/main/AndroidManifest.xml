@@ -9,15 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DashboardActivity"></activity>
-        <activity android:name=".SignUp" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Tips"
+            android:label="Net Worth Tips"
+            android:parentActivityName=".DashboardActivity"></activity>
+        <activity
+            android:name=".Splash"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Team Zeus"
+            android:theme="@style/FullscreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DashboardActivity"
+            android:label="Net Worth Calculator"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SignUp"
+            android:label="Sign Up"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

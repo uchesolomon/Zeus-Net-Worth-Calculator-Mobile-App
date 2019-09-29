@@ -65,7 +65,7 @@ public class SignUp extends AppCompatActivity {
                     editor.commit();
                     editor.putString("PASSWORD", newPassword);
                     editor.commit();
-                    editor.putString(newEmail + newPassword + "data", newFirstName + " " + newLastName);
+                    editor.putString(newEmail + newPassword + "data", newFirstName );
                     editor.commit();
 
                     if (password.getText().toString().length()>=6 && phone.getText().toString().length()>=8
